@@ -22,14 +22,14 @@ import model.accountantRegister;
 @Path("/Accountant")
 public class accountantService {
 	accountantRegister acobj = new accountantRegister();
-
+//get
 	@GET
 	@Path("/")
 	@Produces(MediaType.TEXT_HTML)
 	public String readItems() {
 		return acobj.readItems();
 	}
-
+//insert
 	@POST
 	@Path("/")
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
@@ -45,7 +45,7 @@ public class accountantService {
 		String output = acobj.insertItem(Acode, AName, ANIC, PhoneNo,Email,Address,Password);
 		return output;
 	}
-
+//update
 	@PUT
 	@Path("/")
 	@Consumes(MediaType.APPLICATION_JSON)
@@ -65,7 +65,7 @@ public class accountantService {
 		String output = acobj.updateItem(AID,Acode, AName, ANIC, PhoneNo,Email,Address,Password);
 		return output;
 	}
-
+//delete
 	@DELETE
 	@Path("/")
 	@Consumes(MediaType.APPLICATION_XML)
