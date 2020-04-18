@@ -1,15 +1,11 @@
-<%-- 
-    Document   : index
-    Created on : Apr 13, 2020, 12:11:19 AM
-    Author     : Akila
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Mediplus - Free Bootstrap 4 Template by Colorlib</title>
-    <meta charset="utf-8">
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Mediplus</title>
+ <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
@@ -37,14 +33,11 @@
 		    		<div class="row d-flex">
 		    			<div class="col-md pr-4 d-flex topper align-items-center">
 					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
-						    <span class="text">+ 1235 2355 98</span>
+						    <span class="text">+011 2 609 832</span>
 					    </div>
 					    <div class="col-md pr-4 d-flex topper align-items-center">
 					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
-						    <span class="text">youremail@email.com</span>
-					    </div>
-					    <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
-						    <p class="mb-0 register-link"><a href="#" class="mr-3">Sign Up</a><a href="#">Sign In</a></p>
+						    <span class="text">Mediplus@gmail.com</span>
 					    </div>
 				    </div>
 			    </div>
@@ -61,10 +54,10 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav nav ml-auto">
 	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#department-section" class="nav-link"><span>Department</span></a></li>
-	          <li class="nav-item"><a href="#doctor-section" class="nav-link"><span>Doctors</span></a></li>
-	          <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Blog</span></a></li>
+	          <li class="nav-item"><a href="Logincheck.jsp" class="nav-link"><span>Admin</span></a></li>
+	          <li class="nav-item"><a href="#department-section" class="nav-link"><span>Patient Login</span></a></li>
+	          <li class="nav-item"><a href="#doctor-section" class="nav-link"><span>Doctors Login</span></a></li>
+	          <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Accountant Login</span></a></li>
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 	          <li class="nav-item cta mr-md-2"><a href="appointment.html" class="nav-link">Appointment</a></li>
 	        </ul>
@@ -864,4 +857,5 @@
   <script src="js/main.js"></script>
     
   </body>
+
 </html>
