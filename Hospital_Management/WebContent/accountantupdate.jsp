@@ -12,7 +12,7 @@
 				request.getParameter("ANIC"), request.getParameter("PhoneNo"), request.getParameter("Email"),
 				request.getParameter("Address"),request.getParameter("Password"));
 		session.setAttribute("statusMsg", stsMsg);
-	}
+	}//.....
 %>
 
 <!DOCTYPE html>
