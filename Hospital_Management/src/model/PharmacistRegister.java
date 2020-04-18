@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+import com.sun.jersey.spi.dispatch.RequestDispatcher;
+
 public class PharmacistRegister {
 	// A common method to connect to the DB
 			private Connection connect() {
@@ -30,7 +32,7 @@ public class PharmacistRegister {
 					}
 					// create a prepared statement
 					String query = " insert into pharmacist(`PID`,`Pcode`,`PName`,`PNIC`,`PhoneNo`,`Email`,`Address`,`Password`)"
-							+ " values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+							+ " values (?, ?, ?, ?, ?, ?, ?, ?)";
 					PreparedStatement preparedStmt = con.prepareStatement(query);
 					// binding values
 					preparedStmt.setInt(1, 0);
@@ -85,7 +87,7 @@ public class PharmacistRegister {
 						output += "<td>" + Address + "</td>";
 						output += "<td>" + Password + "</td>";
 						// buttons
-						output += "<td><a href=\"pharmacistupdate.jsp\" class=\"btn btn-secondary\" role=\"button\">Update</a></td>" 
+						output += "<td><button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#myModal\" data-id=\"" + PID + "\">Update</button></td>"
 								+ "<td><form method=\"post\" action=\"pharmacistdet.jsp\">"
 								+ "<input name=\"btnRemove\" type=\"submit\" value=\"Remove\"class=\"btn btn-danger\">"
 								+ "<input name=\"PID\" type=\"hidden\" value=\"" + PID + "\">" + "</form></td></tr>";
@@ -103,6 +105,7 @@ public class PharmacistRegister {
 
 			public String updateItem(String ID, String pcode, String name, String nic, String phone, String email, String address,String pass) {
 				String output = "";
+				System.out.println(ID);
 				try {
 					Connection con = connect();
 					if (con == null) {
@@ -124,13 +127,14 @@ public class PharmacistRegister {
 					preparedStmt.execute();
 					con.close();
 					output = "Updated successfully";
+		
 				} catch (Exception e) {
 					output = "Error while updating the item.";
 					System.err.println(e.getMessage());
 				}
 				return output;
 			}
-
+		
 			public String deleteItem(String PID) {
 				String output = "";
 				try {

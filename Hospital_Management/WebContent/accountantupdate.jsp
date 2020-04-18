@@ -109,7 +109,7 @@
 					<h2 class="title">Accountant Details Update Form</h2>
 				</div>
 				<div class="card-body">
-					<form method="POST" action="docreg.jsp">
+					<form method="POST" action="accountantupdate.jsp">
 						<div class="form-row m-b-55">
 							<div class="name">Accountant code</div>
 							<div class="value">

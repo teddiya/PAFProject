@@ -110,7 +110,7 @@
 					<h2 class="title">Doctor Details Update Form</h2>
 				</div>
 				<div class="card-body">
-					<form method="POST" action="docreg.jsp">
+					<form method="POST" action="docupdate.jsp">
 						<div class="form-row m-b-55">
 							<div class="name">Doctor Licen Number</div>
 							<div class="value">
