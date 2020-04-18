@@ -1,12 +1,12 @@
-<%@page import="model.DoctorRegister"%>
+<%@page import="model.PharmacistRegister"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 
 <%
 	//Delete item----------------------------------
-	if (request.getParameter("DocID") != null) {
-		DoctorRegister itemObj = new DoctorRegister();
-		String stsMsg = itemObj.deleteItem(request.getParameter("DocID"));
+	if (request.getParameter("PID") != null) {
+		PharmacistRegister itemObj = new PharmacistRegister();
+		String stsMsg = itemObj.deleteItem(request.getParameter("PID"));
 		session.setAttribute("statusMsg", stsMsg);
 	}
 %>
@@ -32,16 +32,16 @@
 	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 	crossorigin="anonymous"></script>
 
-<title>Doctor details</title>
+<title>Pharmacist details</title>
 </head>
 <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
 
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav mr-auto">
-			<li class="nav-item active"><a class="nav-link" href="adminHome.html"> Go To Admin Home
-					<span class="sr-only">(current)</span>
+			<li class="nav-item active"><a class="nav-link"
+				href="adminHome.html"> Go To Admin Home <span class="sr-only">(current)</span>
 			</a></li>
-			
+
 		</ul>
 		<form class="form-inline my-2 my-lg-0">
 			<input class="form-control mr-sm-2" type="search"
@@ -57,7 +57,7 @@
 <body>
 
 	<%
-		DoctorRegister docobj = new DoctorRegister();
+		PharmacistRegister docobj = new PharmacistRegister();
 		out.print(docobj.readItems());
 	%>
 </body>

@@ -1,12 +1,12 @@
-<%@page import="model.DoctorRegister"%>
+<%@page import="model.PharmacistRegister"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 
 <%
 	//Delete item----------------------------------
-	if (request.getParameter("DocID") != null) {
-		DoctorRegister itemObj = new DoctorRegister();
-		String stsMsg = itemObj.deleteItem(request.getParameter("DocID"));
+	if (request.getParameter("PID") != null) {
+		PharmacistRegister itemObj = new PharmacistRegister();
+		String stsMsg = itemObj.deleteItem(request.getParameter("PID"));
 		session.setAttribute("statusMsg", stsMsg);
 	}
 %>
@@ -57,7 +57,7 @@
 <body>
 
 	<%
-		DoctorRegister docobj = new DoctorRegister();
+	PharmacistRegister docobj = new PharmacistRegister();
 		out.print(docobj.readItems());
 	%>
 </body>

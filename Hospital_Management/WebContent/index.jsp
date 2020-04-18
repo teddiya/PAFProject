@@ -54,7 +54,7 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav nav ml-auto">
 	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="Logincheck.jsp" class="nav-link"><span>Admin</span></a></li>
+	          <li class="nav-item"><a href="Logincheck.jsp" class="nav-link"><span>Admin Login</span></a></li>
 	          <li class="nav-item"><a href="#department-section" class="nav-link"><span>Patient Login</span></a></li>
 	          <li class="nav-item"><a href="#doctor-section" class="nav-link"><span>Doctors Login</span></a></li>
 	          <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Accountant Login</span></a></li>
