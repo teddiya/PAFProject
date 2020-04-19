@@ -13,7 +13,7 @@ if (request.getParameter("PID") != null) {
 }
 %>
 <%
-	//Insert item---------------------------------
+	//Update item---------------------------------
 	if (request.getParameter("Pcode") != null) { //`PID`,`Pcode`,`PName`,`PNIC`,`PhoneNo`,`Email`,`Address`,`Password`
 		PharmacistRegister itemObj = new PharmacistRegister();
 		String stsMsg = itemObj.updateItem(request.getParameter("Pcode"), request.getParameter("PName"),
@@ -85,7 +85,7 @@ if (request.getParameter("PID") != null) {
 							<div class="name">Pharmacist code</div>
 							<div class="value">
 								<div class="input-group">
-									<input class="form-control" type="text" name="Pcode">
+									<input class="form-control" type="text" name="Pcode" id="Pcode_form">
 
 								</div>
 							</div>
@@ -94,7 +94,7 @@ if (request.getParameter("PID") != null) {
 							<div class="name">Name</div>
 							<div class="value">
 								<div class="input-group">
-									<input class="form-control" type="text" name="PName">
+									<input class="form-control" type="text" name="PName" id="PName_form">
 								</div>
 							</div>
 						</div>
@@ -103,7 +103,7 @@ if (request.getParameter("PID") != null) {
 							<div class="name">NIC Number</div>
 							<div class="value">
 								<div class="input-group">
-									<input class="form-control" type="text" name="PNIC">
+									<input class="form-control" type="text" name="PNIC" id="PNIC_form">
 								</div>
 							</div>
 						</div>
@@ -113,7 +113,7 @@ if (request.getParameter("PID") != null) {
 								<div class="row row-refine">
 									<div class="col-9">
 										<div class="input-group-desc">
-											<input class="form-control" type="text" name="PhoneNo">
+											<input class="form-control" type="text" name="PhoneNo" id="PhoneNo_form">
 
 										</div>
 									</div>
@@ -125,7 +125,7 @@ if (request.getParameter("PID") != null) {
 							<div class="name">Email</div>
 							<div class="value">
 								<div class="input-group">
-									<input class="form-control" type="email" name="Email">
+									<input class="form-control" type="email" name="Email" id="Email_form">
 								</div>
 							</div>
 						</div>
@@ -134,7 +134,7 @@ if (request.getParameter("PID") != null) {
 							<div class="name">Address</div>
 							<div class="value">
 								<div class="input-group">
-									<input class="form-control" type="text" name="Address">
+									<input class="form-control" type="text" name="Address" id="Address_form">
 								</div>
 							</div>
 						</div>
@@ -143,7 +143,7 @@ if (request.getParameter("PID") != null) {
 							<div class="name">Password</div>
 							<div class="value">
 								<div class="input-group">
-									<input class="form-control" type="password" name="Password">
+									<input class="form-control" type="password" name="Password" id="Password_form">
 								</div>
 							</div>
 						</div>
@@ -183,6 +183,14 @@ if (request.getParameter("PID") != null) {
 		    }
 		    
 		    $('#PID_form').val(data_id);
+		    $('#Pcode_form').val($(this).data('todo').Pcode);
+		    $('#PName_form').val($(this).data('todo').PName);
+		    $('#PNIC_form').val($(this).data('todo').PNIC);
+		    $('#PhoneNo_form').val($(this).data('todo').PhoneNo);
+		    $('#Email_form').val($(this).data('todo').Email);
+		    $('#Address_form').val($(this).data('todo').Address);
+		    $('#Password_form').val($(this).data('todo').Password);
+		    
 		  })
 		});
 	</script>
