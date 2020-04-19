@@ -3,8 +3,6 @@
 	pageEncoding="ISO-8859-1"%>
 
 <%
-
-
 //Delete item----------------------------------
 if (request.getParameter("PID") != null) {
 	PharmacistRegister itemObj = new PharmacistRegister();
@@ -21,7 +19,7 @@ if (request.getParameter("PID") != null) {
 				request.getParameter("Address"), request.getParameter("Password"), request.getParameter("PID_form"));
 		session.setAttribute("statusMsg", stsMsg);
 	}
-%>
+%> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -86,7 +84,6 @@ if (request.getParameter("PID") != null) {
 							<div class="value">
 								<div class="input-group">
 									<input class="form-control" type="text" name="Pcode" id="Pcode_form">
-
 								</div>
 							</div>
 						</div>

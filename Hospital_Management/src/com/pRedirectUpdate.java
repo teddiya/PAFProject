@@ -53,7 +53,7 @@ public class pRedirectUpdate extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //		response.sendRedirect("adminHome.html");
-		
+		System.out.println("test");
 			String PID=request.getParameter("PID_form");
 			String Pcode=request.getParameter("Pcode");
 			String PName=request.getParameter("PName");

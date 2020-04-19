@@ -39,7 +39,7 @@ public class PharmacistRegister {
 					preparedStmt.setString(2, pcode);
 					preparedStmt.setString(3, name);
 					preparedStmt.setString(4, nic);
-					preparedStmt.setInt(5, Integer.parseInt(phone));
+					preparedStmt.setString(5, phone);
 					preparedStmt.setString(6, email);
 					preparedStmt.setString(7, address);
 					preparedStmt.setString(8, pass);
@@ -74,7 +74,7 @@ public class PharmacistRegister {
 						String Pcode = rs.getString("Pcode");
 						String PName = rs.getString("PName");
 						String PNIC = rs.getString("PNIC");
-						String PhoneNo = Double.toString(rs.getDouble("PhoneNo"));
+						String PhoneNo = rs.getString("PhoneNo");
 						String Email = rs.getString("Email");
 						String Address = rs.getString("Address");
 						String Password = rs.getString("Password");
@@ -137,6 +137,7 @@ public class PharmacistRegister {
 			}
 		
 			public String deleteItem(String PID) {
+				System.out.println("p delte");
 				String output = "";
 				try {
 					Connection con = connect();

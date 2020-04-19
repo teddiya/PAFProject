@@ -15,6 +15,9 @@
 		<url-pattern>/adminService/*</url-pattern> 
 		<url-pattern>/pharmacistService/*</url-pattern>
 		<url-pattern>/accountantService/*</url-pattern>
+		<url-pattern>/aRedirectUpdate/*</url-pattern>
+		<url-pattern>/pRedirectUpdate/*</url-pattern>
+		<url-pattern>/dRedirectUpdate/*</url-pattern>
 	</servlet-mapping>
 	
 
